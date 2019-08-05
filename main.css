@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css?family=Amiri&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  max-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.605), rgba(0, 0, 0, 0.502)),
+    url("https://unsplash.it/600/600");
+  background-position: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  overflow: hidden;
+  filter: blur;
+}
+.overlay {
+  position: relative;
+  background: rgba(0, 0, 0, 0.742);
+  height: 100vh;
+
+  z-index: 0;
+}
+.content {
+  position: absolute;
+  z-index: 1000;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.3rem;
+}
+#weather_div {
+  cursor: pointer;
+  height: 100px;
+  /* background: blue; */
+}
+#weather-count {
+  padding: 0 !important;
+}
+#location {
+  display: inline-block;
+  margin-top: -25px;
+  margin-left: 15px;
+}
+#weather-count img {
+  padding-top: 0;
+  vertical-align: middle;
+}
+#weather_div h4 {
+  padding-top: 15px;
+}
+#weather_div:focus {
+  outline: none;
+}
+#text-input {
+  color: white;
+  border: none;
+  padding: 0.4rem 0.5rem;
+  border-bottom: 1px solid grey;
+  margin-bottom: 0.5rem;
+  border-radius: 0.2rem;
+  background: none;
+}
+.location-modal {
+  padding: 2rem;
+  height: 100px;
+  width: 200px;
+  /* background: #000; */
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.location-modal.active {
+  opacity: 1;
+}
+#search {
+  display: block;
+  padding: 0.2rem 1.2rem;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 0.1rem;
+  transition: all 0.2s ease-in-out;
+}
+#search:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+#text-input:active {
+  outline: none;
+}
+#text-input:focus {
+  outline: none;
+}
+#search:focus {
+  outline: none;
+}
+
+#prayer_div {
+  /* background: red; */
+  text-align: center;
+}
+#prayer_div ul {
+  text-transform: uppercase;
+  list-style: none;
+  /* font-weight: 300; */
+  padding: 0.5rem 1rem;
+  /* text-align: center; */
+}
+#prayer_div ul li {
+  font-size: 0.9rem;
+}
+#prayer_div span {
+  width: 20px;
+  margin-right: 10px;
+  text-align: left;
+}
+.details {
+  /* background: red; */
+  margin-top: 100px;
+  margin-bottom: 70px;
+  text-align: center;
+}
+.details #time {
+  font-size: 8rem;
+  font-weight: bold;
+}
+.details h2 {
+  font-size: 2.4rem;
+  font-weight: 100;
+}
+#focus:focus {
+  outline: none;
+}
+#quran_div {
+  /* margin: 0 auto; */
+  /* display: flex;
+  justify-content: space-between; */
+  text-align: center;
+  width: 550px;
+  margin: 0 auto;
+  /* position: absolute; */
+  /* bottom: 0; */
+}
+#qtext {
+  text-align: center;
+  font-family: "Amiri", serif;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+}
+
+.city_search {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 0.1rem;
+  transition: all 0.2s ease-in-out;
+}
+.city_search {
+  border-bottom: 2px solid grey;
+  background: none;
+  color: white;
+  margin-bottom: 1rem;
+}
+.city_search:focus {
+  outline: none;
+  color: white;
+}
+.preloader.load {
+  display: block;
+}
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: grey;
+  display: none;
+}
+
+/* background: red; */
+
+@media (max-width: 570px) {
+  .details #time {
+    font-size: 2.5rem;
+  }
+  .details h2 {
+    font-size: 1.2rem;
+    font-weight: 100;
+  }
+
+  #prayer-div h2 {
+    font-size: 1rem;
+  }
+  #location {
+    margin-left: 0;
+  }
+}

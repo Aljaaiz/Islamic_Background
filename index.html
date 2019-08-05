@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200,300,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="preloader load">
+      <h2>Loading ......</h2>
+    </div>
+    <header>
+      <audio id="adhan">
+        <source src="./Adhan Makkah.mp3" type="audio/mpeg" />
+      </audio>
+      <div id="weather_div" tabindex="0">
+        <div id="weather-count">
+          <img class="weatherImg" src="cloud.png" alt="" style="height:40px;" />
+          <span id="weatherId">21</span>&deg;c
+        </div>
+        <div class="location_name">
+          <h4 id="location">Dubai</h4>
+          <span id="country">ng</span>
+        </div>
+
+        <div class="location-modal " tabindex="1">
+          <input type="text" id="text-input" placeholder="insert your city" />
+          <!-- <button id="search">search</button> -->
+        </div>
+      </div>
+
+      <div class="details">
+        <time id="time"
+          ><h1>12:00:00 <span>AM</span></h1></time
+        >
+
+        <h2>
+          <span id="greetings">Assalamy Alykum</span>
+          <span contenteditable="true" id="name">Your Name</span>
+        </h2>
+        <h2>What is your Focus today</h2>
+        <h2 contenteditable="true" id="focus">Reading</h2>
+
+        <div id="quran_div" style="margin-top: 30px;">
+          <div id="q-verse">
+            <p>﷽</p>
+            <p id="qtext"></p>
+            <p>Q <span id="chapter"></span> :<span id="c_name"></span></p>
+          </div>
+        </div>
+      </div>
+
+      <div id="prayer_div">
+        <h3>Prayer Timing</h3>
+
+        <div class="city_prayer_search">
+          <input type="text" class="city_search" />
+        </div>
+        <h5 prayerTimeLoc>Prayer time for</h5>
+        <ul></ul>
+      </div>
+    </header>
+
+    <script src="app.js"></script>
+  </body>
+</html>
